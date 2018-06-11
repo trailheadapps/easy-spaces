@@ -1,0 +1,17 @@
+<aura:component>
+
+    <aura:attribute name="values" type="String[]" default="[]"/>
+    <aura:attribute name="selectedValues" type="String[]" default="[]"/>
+    
+    <aura:registerEvent name="selectChange" type="c:selectChange"/>
+    <div aura:id="pillTileBox" class="slds-box">
+    <lightning:layout horizontalAlign="space" multipleRows="true">
+        <aura:iteration items="{!v.values}" var="item">
+                <lightning:layoutItem class="slds-m-horizontal_xxx-small">
+                    <c:pill label="{!item}" select="{!c.handleSelect}" deselect="{!c.handleDeselect}" />
+                </lightning:layoutItem>
+        </aura:iteration>
+    </lightning:layout>
+    </div>
+    
+</aura:component>

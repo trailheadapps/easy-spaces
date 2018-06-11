@@ -1,0 +1,18 @@
+.THIS.slds-box{
+    padding: 0rem;
+    border-radius: .30rem;
+}
+.THIS.tile:hover{
+    opacity: 0.75;
+}
+.THIS.tile.mute{
+    opacity: 0.45;
+}
+.THIS .slds-carousel__content{
+    height: 4rem;
+    padding-bottom: 0;
+}
+.THIS .overlay{
+    position: relative;
+    height: 0px;
+}

@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+        <aura:attribute name="record" type="Object"/>
+
+        <force:recordData aura:id="recordService"
+            recordId="{!v.recordId}"
+            fields="[ 'Reservation_Status__c' ]"
+            targetFields="{!v.record}"
+            mode="EDIT"
+            recordUpdated="{!c.onRecordUpdated}"/>
+    
+        <lightning:picklistPath aura:id="picklistPath" recordId="{!v.recordId}"
+            picklistFieldApiName="Reservation_Status__c"
+            onselect="{!c.handleSelect}">
+        </lightning:picklistPath>
+</aura:component>	

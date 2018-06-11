@@ -1,0 +1,31 @@
+<aura:component>
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="src" type="String" />
+    <aura:attribute name="header" type="String" default=""/>
+    <aura:attribute name="description" type="String" default=""/>
+    <aura:attribute name="allowSelection" type="Boolean" default="false"/>
+    <aura:attribute name="selected" type="Boolean" default="false"/>
+    <aura:attribute name="channel" type="String" default=""/>
+    <aura:attribute name="muted" type="Boolean" default="false"/>
+
+    <aura:registerEvent name="selectChange" type="c:selectChange"/>
+    <aura:handler event="c:muteTiles" action="{!c.checkMute}"/>
+
+    <div class="slds-box tile" aura:id="tile">
+        <aura:if isTrue="{!v.allowSelection}">
+            <div aura:id="overlay" class="overlay">
+                <lightning:buttonIconStateful iconName="utility:check" 
+                    selected="{!v.selected}" 
+                    onclick="{!c.handleSelect}" 
+                    alternativeText="Select" 
+                    variant="border-filled"
+                    value="{!v.recordId}"/>
+            </div>
+        </aura:if>
+    <lightning:carouselImage
+        src="{!v.src}"
+        header="{!v.header}"
+        description="{!v.description}"
+        onclick="{!c.handleImageClick}"/>   
+    </div>
+</aura:component>	

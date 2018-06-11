@@ -1,0 +1,14 @@
+<aura:component>
+    <aura:attribute name="label" type="String"/>
+    <aura:attribute name="selected" type="Boolean" default="false" />
+
+    <aura:registerEvent name="select" type="c:pillSelect"/>
+    <aura:registerEvent name="deselect" type="c:pillDeselect"/>
+    <!--Using HTML and SLDS to build a pill in order to preserve access to 'onclick' event-->
+    <span aura:id="pill" class="slds-pill" onclick="{!c.handleClick}">
+        <span class="slds-pill__label label-color">
+            {!v.label}
+        </span>
+    </span>
+        
+</aura:component>

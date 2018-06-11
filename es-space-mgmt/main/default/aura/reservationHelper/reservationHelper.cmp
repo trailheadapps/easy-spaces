@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="error" type="String"/>
+    <aura:attribute name="sobjectType" type="String"/>
+    <aura:attribute name="tabId" type="String"/>
+    
+    <aura:handler event="ltng:selectSObject" action="{!c.handleSelectEvent}" />
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+
+    <lightning:card iconName="custom:custom18" title="Reservation Helper">
+        <aura:if isTrue="{!v.recordId}">
+        <lightning:flow aura:id="flowCmp" onstatuschange="{!c.handleStatusChange}"/>
+            <aura:set attribute="else">
+                <div class="slds-card">
+                    <h1 class="slds-text-heading_x-small slds-p-left_small">Select a record to get started.</h1>
+                </div>
+            </aura:set>
+        </aura:if>
+        {!v.error}
+    </lightning:card>
+</aura:component>	

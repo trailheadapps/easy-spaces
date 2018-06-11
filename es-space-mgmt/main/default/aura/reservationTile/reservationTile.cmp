@@ -1,0 +1,63 @@
+<aura:component>
+    <aura:attribute name="reservation" type="Object"/>
+    <aura:attribute name="muted" type="Boolean" default="false"/>
+    
+    <aura:registerEvent name="selectObject" type="c:selectObject"/>
+    <aura:registerEvent name="mute" type="c:muteTiles"/>
+    <aura:handler event="c:muteTiles" action="{!c.checkMute}"/>
+
+    <div aura:id="tile" onclick="{!c.handleClick}" class="tile">
+        <lightning:tile label="{!v.reservation.Name}" title="{!v.reservation.Name}" href="{! '/lightning/r/Reservation__c/' + v.reservation.Id + '/view'}">
+            <aura:set attribute="media">
+                <lightning:icon iconName="custom:custom14" />
+            </aura:set>
+            <dl class="slds-dl_horizontal">
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate" title="Customer">Customer:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <aura:if isTrue="{! v.reservation.Lead__r.Name eq null }">
+                        <p class="slds-truncate" title="{!v.reservation.Contact__r.Name}">{!v.reservation.Contact__r.Name}</p>
+                    <aura:set attribute="else">
+                        <p class="slds-truncate" title="{!v.reservation.Lead__r.Name}">{!v.reservation.Lead__r.Name}</p>
+                    </aura:set>
+                    </aura:if>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                        <p class="slds-truncate" title="Status">Status:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="{!v.reservation.Status__c}">{!v.reservation.Status__c}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                        <p class="slds-truncate" title="Status">Market:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="{!v.reservation.Market__r.Name}">{!v.reservation.Market__r.Name}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                        <p class="slds-truncate" title="Start Date">Start Date:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="{!v.reservation.Start_Date__c}">
+                        <lightning:formattedDateTime value="{!v.reservation.Start_Date__c}"/>
+                    </p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                        <p class="slds-truncate" title="End Date">End Date:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="{!v.reservation.End_Date__c}">
+                        <lightning:formattedDateTime value="{!v.reservation.End_Date__c}"/>
+                    </p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                        <p class="slds-truncate" title="No. of Guests">Total Guests:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="{!v.reservation.Total_Number_of_Guests__c}">{!v.reservation.Total_Number_of_Guests__c}</p>
+                </dd>
+            </dl>
+        </lightning:tile>
+    </div>  
+</aura:component>

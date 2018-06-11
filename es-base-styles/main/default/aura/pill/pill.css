@@ -1,0 +1,6 @@
+.THIS.selected{
+    background-color: token(EScontrastBrand);
+}
+.THIS.selected .label-color {
+    color: white;
+}

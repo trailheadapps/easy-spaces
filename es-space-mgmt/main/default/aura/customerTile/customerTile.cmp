@@ -1,0 +1,31 @@
+<aura:component>
+    <aura:attribute name="item" type="Object"/>
+    <aura:attribute name="sobject" type="String" />
+    <aura:attribute name="muted" type="Boolean" default="false"/>
+
+    <aura:registerEvent name="selectSObject" type="ltng:selectSObject"/>
+    <aura:registerEvent name="mute" type="c:muteTiles"/>
+    <aura:handler event="c:muteTiles" action="{!c.checkMute}"/>
+
+    <div aura:id="tile" onclick="{!c.handleClick}" class="tile">
+    <lightning:tile label="{!v.item.name}" title="{!v.item.name}" href="{! '/lightning/r/' + v.sobject + '/' + v.item.Id + '/view'}">
+        <aura:set attribute="media">
+            <lightning:icon iconName="{! 'standard:'+ v.sobject }" />
+        </aura:set>
+        <dl class="slds-dl_horizontal">
+            <dt class="slds-dl_horizontal__label">
+                <p class="slds-truncate" title="Email">Email:</p>
+            </dt>
+            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                <p class="slds-truncate" title="{!v.item.email}">{!v.item.email}</p>
+            </dd>
+            <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate" title="Reservation Status">Status:</p>
+            </dt>
+            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                <p class="slds-truncate" title="{!v.item.status}">{!v.item.status}</p>
+            </dd>
+        </dl>
+    </lightning:tile>
+    </div>  
+</aura:component>	

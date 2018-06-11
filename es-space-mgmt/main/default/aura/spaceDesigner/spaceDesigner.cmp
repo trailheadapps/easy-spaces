@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="reservation" type="Object" /> 
+    <aura:attribute name="customer" type="String"/>
+    <aura:attribute name="tabId" type="String" />
+    
+    <aura:handler event="c:selectObject" action="{!c.manageFlow}"/>
+    <aura:handler name="init" value="this" action="{!c.onInit}"/>
+    
+    <aura:if isTrue="{!v.reservation}">
+        <lightning:card iconName="custom:custom50" title="{! 'Designing Space for '+ v.customer}">
+            <lightning:flow aura:id="flowCmp" onstatuschange="{!c.handleReset}"/>
+        </lightning:card>
+        <aura:set attribute="else">
+            <div class="slds-card">
+                <h1 class="slds-text-heading_x-small slds-p-left_small">Select a record to get started.</h1>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

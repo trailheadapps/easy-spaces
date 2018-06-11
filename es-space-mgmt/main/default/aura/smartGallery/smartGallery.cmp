@@ -1,0 +1,53 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global">
+    <aura:attribute name="relatedSpaces" type="Object[]"/>
+    <aura:attribute name="marketId" type="String"/>
+    <aura:attribute name="selectedSpace" type="String" />
+    <aura:attribute name="popTabOnFinish" type="Boolean" default="false"/>
+    <aura:attribute name="spaceId" type="String" />
+    <aura:attribute name="spaceFields" type="String[]" default="Name,Category__c,Daily_Booking_Rate__c,Maximum_Capacity__c,Minimum_Capacity__c"/>
+    <aura:attribute name="spaceTypes" type="String[]" default="[]"/>
+
+    <aura:registerEvent name="mute" type="c:muteTiles"/>
+    <c:marketService aura:id="marketServiceCmp" relatedSpaces="{!v.relatedSpaces}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="ltng:selectSObject" action="{!c.handleTileSelect}"/>
+
+    <div class="slds-card">
+        <lightning:layout>
+        <lightning:layoutItem size="3" class="slds-p-left_small slds-p-bottom_small">
+            <div>
+            <h1 class="slds-text-heading_x-small">Filter by Space Type:</h1>
+                <c:pillTile selectChange="{!c.handleChange}" values="Scheduled Activity,Come-and-Go,Large Groups,Individuals or Small Groups,Indoor,Outdoor,Conversation Starter,Energizing,Quiet,Relaxing" />
+            </div>
+            <aura:if isTrue="{!v.spaceId.length gt 0}">
+                <div class="slds-box slds-m-top_xxx-small">
+                    <h1 class="slds-text-heading_small slds-p-bottom_x-small">Space Details</h1>
+                    <lightning:recordForm 
+                    recordId="{!v.spaceId}" 
+                    objectApiName="Space__c"
+                    fields="{!v.spaceFields}" 
+                    mode="readonly" />
+                    <lightning:buttonGroup class="slds-m-top_xxx-small">
+                        <lightning:button variant="neutral" label="Add" title="Add Space" onclick="{!c.updateReservation}"/>
+                        <lightning:button variant="neutral" label="Add &amp; Exit" title="Select Space" onclick="{!c.updateAndGo}"/>
+                    </lightning:buttonGroup>
+                </div>
+            </aura:if>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="9">
+        <lightning:layout horizontalAlign="space" multipleRows="true">
+            <aura:iteration items="{!v.relatedSpaces}" var="space">
+                <lightning:layoutItem size="3" class="slds-p-horizontal_small slds-p-vertical_xx-small tile">
+                    <c:galleryTile src="{!space.Picture_URL__c}" 
+                        description="{!space.Name}" 
+                        recordId="{!space.Id}" 
+                        allowSelection="true"
+                        channel="smartGallery"
+                        selectChange="{!c.handleDeselect}"/>
+                </lightning:layoutItem>
+            </aura:iteration>
+        </lightning:layout>
+        </lightning:layoutItem>
+    </lightning:layout>
+    </div>
+</aura:component>	

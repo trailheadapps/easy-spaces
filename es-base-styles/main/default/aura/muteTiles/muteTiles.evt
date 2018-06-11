@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="muteArray" type="String[]" />
+    <aura:attribute name="channel" type="String"/>
+</aura:event>

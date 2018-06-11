@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="reservationManagerController" access="global">
+    <aura:attribute name="reservationList" type="Object[]"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+
+    <div class="slds-card">
+        <span class="slds-text-heading_small slds-m-left_small">Open Reservations</span>
+        <ul class="slds-list_vertical slds-has-dividers_bottom-space">
+            <aura:iteration items="{!v.reservationList}" var="res">
+                <li class="slds-item">
+                    <c:reservationTile reservation="{!res}"/>
+                </li>
+            </aura:iteration>
+        </ul>
+    
+    </div>
+</aura:component>	

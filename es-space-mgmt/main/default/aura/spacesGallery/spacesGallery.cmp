@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForRecordHome, force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="marketRecord" type="Market__c"/>
+    <aura:attribute name="relatedSpaces" type="Object[]"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    
+    <force:recordData aura:id="marketLDScmp"
+        recordId="{!v.recordId}"
+        layoutType="FULL"
+        targetRecord="{!v.marketRecord}" />
+
+    <c:marketService aura:id="marketServiceCmp" relatedSpaces="{!v.relatedSpaces}"/>
+   
+    <div class="slds-card">
+    <lightning:layout horizontalAlign="space" multipleRows="true">
+        <aura:iteration items="{!v.relatedSpaces}" var="space">
+            <lightning:layoutItem size="3" class="slds-p-around_small tile">
+                <c:galleryTile src="{!space.Picture_URL__c}" description="{!space.Name}" recordId="{!space.Id}"/>
+            </lightning:layoutItem>
+        </aura:iteration>
+    </lightning:layout>
+    </div>
+</aura:component>	

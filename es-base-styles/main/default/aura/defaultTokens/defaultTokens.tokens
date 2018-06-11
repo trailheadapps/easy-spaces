@@ -1,0 +1,4 @@
+<aura:tokens extends="force:base">
+	<aura:token name="EScolorBrand" value="#B2FDDA"/>
+	<aura:token name="EScontrastBrand" value="#012615"/>
+</aura:tokens>

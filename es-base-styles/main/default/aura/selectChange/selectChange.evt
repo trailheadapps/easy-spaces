@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="selectedValues" type="String[]"/>
+    <aura:attribute name="reason" type="String"/>
+    <aura:attribute name="recordId" type="Id"/>
+</aura:event>

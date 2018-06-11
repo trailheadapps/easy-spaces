@@ -1,0 +1,3 @@
+<design:component >
+    <design:attribute name="sobject" label="Object to display" description="Which object should display in the list?" datasource="Lead, Contact"/>
+</design:component>

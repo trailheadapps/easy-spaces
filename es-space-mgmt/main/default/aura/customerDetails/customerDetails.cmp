@@ -1,0 +1,64 @@
+<aura:component implements="lightning:availableForFlowScreens" controller="marketServices" access="global" >
+    <aura:attribute name="sobject" type="String" />
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="fieldsArray" type="String[]" default="[]"/>
+    <aura:attribute name="customerRecord" type="Object" />
+    <aura:attribute name="markets" type="String[]"/>
+    <aura:attribute name="requestedMarket" type="String"/>
+    <aura:attribute name="numberOfPeople" type="Integer" default="150"/>
+    <aura:attribute name="startDate" type="Date"/>
+    <aura:attribute name="endDays" type="Integer" default="7"/>
+    <aura:attribute name="dateRanges" type="List" default="[
+        { 'label': '1 Day', 'value': '1'},
+        { 'label': '7 Days', 'value': '7'},
+        { 'label': '30 Days', 'value': '30'},
+        { 'label': '60 Days', 'value': '60'},
+        { 'label': 'More than 60 Days', 'value': '61'}
+    ]"/>
+
+    <c:marketService aura:id="marketServiceCmp" marketsByState="{!v.markets}"/>
+    <c:customerService aura:id="customerServiceCmp" fieldsArray="{!v.fieldsArray}"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    
+    <aura:if isTrue="{! v.recordId &amp;&amp; v.fieldsArray.length gt 0}">
+    <force:recordData aura:id="recordService"
+        recordId="{!v.recordId}"
+        fields="{!v.fieldsArray}"
+        targetFields="{!v.customerRecord}"/>
+    </aura:if>
+    <div class="slds-card">
+    <aura:if isTrue="{! v.recordId &amp;&amp; v.fieldsArray.length gt 0}">  
+        <lightning:layout multipleRows="true" class="slds-m-horizontal_small">
+            <lightning:layoutItem size="12" class="slds-m-vertical_small">
+                <p class="slds-text-heading_x-small slds-p-bottom_small">
+                    Primary Contact for Reservation: 
+                </p>
+                <lightning:recordForm 
+                    objectApiName="{!v.sobject}"
+                    recordId="{!v.recordId}"
+                    fields="{!v.fieldsArray}" 
+                    mode="view"
+                    columns="2"
+                    onload="{!c.loadMarkets}"/> 
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" class="slds-p-right_small slds-m-vertical_small">
+                <lightning:select name="selectItem" label="Where do they want the space?" value="{!v.requestedMarket}" onchange="{!c.handleMarket}" class="slds-m-bottom_small">
+                    <aura:iteration items="{!v.markets}" var="city">
+                        <option text="{!city.City__c}" value="{!city.Id}"/>
+                    </aura:iteration>
+                </lightning:select>
+                <lightning:slider label="For how many people?" value="{!v.numberOfPeople}" size="base" min="2" max="250" />
+            </lightning:layoutItem>    
+            <lightning:layoutItem size="6" class="slds-p-left_small slds-m-vertical_small">  
+                    <lightning:input type="date" name="start" label="When do they need the space?" placeholder="Choose date..." value="{!v.startDate}" class="slds-m-bottom_small"/>
+                    <lightning:radioGroup name="options" label="How long do they want the space?" options="{!v.dateRanges}" value="{!v.endDays}" type="radio"/>
+            </lightning:layoutItem>  
+            <lightning:layoutItem>
+                <lightning:button variant="brand" label="Draft Reservation" title="Draft" onclick="{!c.draftReservation}"/>
+            </lightning:layoutItem>     
+        </lightning:layout>  
+        </aura:if>
+    </div>
+
+</aura:component>	

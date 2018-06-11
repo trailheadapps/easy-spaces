@@ -1,0 +1,76 @@
+{
+    "packageDirectories": [
+        {
+            "path": "./es-base-objects",
+            "package": "ESBaseObjects",
+            "id": "0HoB00000004CWSKA2",
+            "versionName": "Base Objects v1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        },
+        {
+            "path": "./es-base-code",
+            "package": "ESBaseCode",
+            "id": "0HoB00000004CWXKA2",
+            "versionName": "Base Code v1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "ESBaseObjects",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "./es-base-styles",
+            "package": "ESBaseStyles",
+            "id": "0HoB00000004CWcKAM",
+            "versionName": "Base Styles v1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "ESBaseObjects",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "ESBaseCode",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "./es-space-mgmt",
+            "package": "ESSpaceMgmt",
+            "id" : "0HoB00000004CWhKAM",
+            "versionName": "Space Mgmt v1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": true,
+            "dependencies": [
+                {
+                    "package": "ESBaseObjects",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "ESBaseCode",
+                    "versionNumber": "0.1.0.LATEST"
+                }, 
+                {
+                    "package": "ESBaseStyles",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "43.0",
+    "packageAliases": {
+        "ESBaseObjects": "0HoB00000004CWSKA2",
+        "ESBaseCode": "0HoB00000004CWXKA2",
+        "ESBaseStyles": "0HoB00000004CWcKAM",
+        "ESSpaceMgmt": "0HoB00000004CWhKAM"
+    }
+
+}
