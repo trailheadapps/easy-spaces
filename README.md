@@ -1,4 +1,4 @@
-## Easy Spaces Staging
+## Easy Spaces
 
 Easy Spaces is a fictional event management company that creates and manages custom pop-up spaces for companies and individuals. Easy Spaces helps customers create temporary spaces like cafés, game rooms or themed rooms for special occasions in their offices and homes.
 
@@ -202,6 +202,6 @@ Easy Spaces illustrates how to organize application metadata into granular units
 
 To install the Easy Spaces application, you'll need to install several, interdependent unlocked packages. The dependecies between the Easy Spaces packages are listed in the sfdx-project.json file for this repo. 
 
-You can also explore the contents of each package by looking at the related package folder within this repo. The `path` attribute entries in the sfdx-project.json file show which folder contains the metadata for a particular package. 
+You can also explore the contents of each package by looking at the related package folder within this repo. The `path` attribute entries in the [sfdx-project.json](./sfdx-project.json) file show which folder contains the metadata for a particular package. 
 
 For more information on how to work with the sfdx-project.json markup related to unlocked packages, see this [blog post](). And for more background on the approach to organizing the Easy Spaces metadata into these package modules, check out [this post]().
