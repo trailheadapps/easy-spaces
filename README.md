@@ -2,6 +2,8 @@
 
 Easy Spaces is a fictional event management company that creates and manages custom pop-up spaces for companies and individuals. Easy Spaces helps customers create temporary spaces like cafés, game rooms or themed rooms for special occasions in their offices and homes.
 
+[![Thumbnail](https://img.youtube.com/vi/ZwvegTLx9kk/0.jpg)](https://youtu.be/ZwvegTLx9kk)
+
 ## Table of Contents
 
 *   [Features](#features)
