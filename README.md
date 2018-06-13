@@ -47,8 +47,8 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 1.  From the command line, clone this repository:
 
     ```zsh
-    git clone https://github.com/trailheadapps/easy-spaces-staging
-    cd easy-spaces-staging
+    git clone https://github.com/trailheadapps/easy-spaces
+    cd easy-spaces
     ```
 
 1. Import Lead data:
@@ -104,8 +104,8 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 1.  Clone this repository:
 
     ```zsh
-    git clone https://github.com/trailheadapps/easy-spaces-staging
-    cd easy-spaces-staging
+    git clone https://github.com/trailheadapps/easy-spaces
+    cd easy-spaces
     ```
 
 1.  Create a scratch org and provide it with an alias (**easyspaces** in the command below):
