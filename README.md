@@ -148,8 +148,8 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 1.  Load sample data:
 
     ```
-    sfdx force:data:tree:import --plan ./sample-data/Plan1.json
-    sfdx force:data:tree:import --plan ./sample-data/Plan2.json
+    sfdx force:data:tree:import --plan ./data/Plan1.json
+    sfdx force:data:tree:import --plan ./data/Plan2.json
     ```
 
 1.  Open the scratch org:
