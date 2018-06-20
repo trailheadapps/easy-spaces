@@ -11,7 +11,7 @@ Easy Spaces is a fictional event management company that creates and manages cus
 *   [Features](#features)
 *   Installation
     *   [By URL](#install-by-url)
-    *   [Salesforce DX](#install-using-salesforce-dx)
+    *   [Using Salesforce DX](#install-using-salesforce-dx)
 *   [Code Highlights](#code-highlights)
 *   [Additional Resources](#additional-resources)
 
@@ -150,8 +150,8 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 1.  Load sample data:
 
     ```
-    sfdx force:data:tree:import --plan ./sample-data/Plan1.json
-    sfdx force:data:tree:import --plan ./sample-data/Plan2.json
+    sfdx force:data:tree:import --plan ./data/Plan1.json
+    sfdx force:data:tree:import --plan ./data/Plan2.json
     ```
 
 1.  Open the scratch org:
@@ -180,7 +180,7 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 
 The **spaceDesigner** and **reservationHelper** components render flow interviews dynamically, by using the **lightning:flow** base component. You can see the **customerDetails** and **smartGallery** components at work as screens in these dynamic flows. Both of these components use the functionality of the **lightning:availableForFlowScreens** interface to control flow navigation actions.
 
-See this [blog post]() for more detail about custom flow navigation and dynamic flow interviews.
+See this [blog post](https://developer.salesforce.com/blogs/2018/06/announcing-the-easy-spaces-app.html) for more detail about custom flow navigation and dynamic flow interviews.
 
 Components used as Lightning Flow screens also enforce a convention in the markup of their design files, to help developers better track how attributes are being used by flow interviews. See the [customerDetails](./es-space-mgmt/main/default/aura/customerDetails/customerDetails.design) and [smartGallery](./es-space-mgmt/main/default/aura/smartGallery/smartGallery.design) component design files for examples.
 
@@ -194,11 +194,11 @@ The customerList component uses a design attribute to allow for users working in
 
 ![customerList component design attribute as picklist in Lightning App Builder](./docs/customerList_design.png)
 
-This is just one example of object-agnostic design at work in Easy Spaces. See this [blog post]() for more detail about this pattern.
+This is just one example of object-agnostic design at work in Easy Spaces. See this [blog post](https://developer.salesforce.com/blogs/2018/06/announcing-the-easy-spaces-app.html) for more detail about this pattern.
 
 ### Workspace API
 
-Easy Spaces uses the Workspace API to provide customized navigation behavior and control the tabs and subtabs in the Space Management console app. You can see the Workspace API at work in the **openRecordAction**, **reservationHelper** and **spaceDesigner** components. You can get more detail about using this API in your components in this [blog post]().
+Easy Spaces uses the Workspace API to provide customized navigation behavior and control the tabs and subtabs in the Space Management console app. You can see the Workspace API at work in the **openRecordAction**, **reservationHelper** and **spaceDesigner** components. You can get more detail about using this API in your components in this [blog post](https://developer.salesforce.com/blogs/2018/06/announcing-the-easy-spaces-app.html). 
 
 ### Modular Design and Unlocked Packaging
 
@@ -208,4 +208,4 @@ To install the Easy Spaces application, you'll need to install several, interdep
 
 You can also explore the contents of each package by looking at the related package folder within this repo. The `path` attribute entries in the sfdx-project.json show which folder contains the metadata for a particular package.
 
-For more information on how to work with the sfdx-project.json markup related to unlocked packages, see this [blog post](). And for more background on the approach to organizing the Easy Spaces metadata into these package modules, check out [this post]().
+For more about how the Easy Spaces metadata is organized into package modules, check out [this post](https://developer.salesforce.com/blogs/2018/06/working-with-modular-development-and-unlocked-packages-part-2.html).
