@@ -10,10 +10,9 @@ Easy Spaces is a fictional event management company that creates and manages cus
 
 *   [Features](#features)
 *   Installation
-    *   [By URL](#install-by-url)
-    *   [Using Salesforce DX](#install-using-salesforce-dx)
+    *   [Installing Easy Spaces using Salesforce DX](#installing-easy-spaces-using-salesforce-dx)
+    *   [Installing Easy Spaces by URL](#installing-easy-spaces-by-url)
 *   [Code Highlights](#code-highlights)
-*   [Additional Resources](#additional-resources)
 
 ## Features
 
@@ -31,71 +30,8 @@ A quick overview of the features you can explore with Easy Spaces:
 
 ## Installation
 
-### Install by URL
-Use this option if you don't have Salesforce DX configured and want to experience the sample app.
 
-1. [Sign up](https://developer.salesforce.com/signup) for a Developer Edition (DE) org.
-
-1. Enable MyDomain in your DE org. Instructions to do this are [here](https://trailhead.salesforce.com/projects/quickstart-lightning-components/steps/quickstart-lightning-components1).
-
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFSIA2) to install the **ESBaseObjects** package and choose **Install for All Users**.
-
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFXIA2) to install the **ESBaseCode** package and choose **Install for All Users**.
-
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFcIAM) to install the **ESBaseStyles** package and choose **Install for All Users**.
-
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFhIAM) to install the **SpaceManagementApp** package and choose **Install for All Users**.
-
-1.  From the command line, clone this repository:
-
-    ```zsh
-    git clone https://github.com/trailheadapps/easy-spaces
-    cd easy-spaces
-    ```
-
-1. Import Lead data:
-    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-    - Click **Launch Wizard**.
-    - Click the **Standard objects** tab, click **Leads**, and click **Add New Records**.
-    - Drag **Lead_Data.csv** from the data folder of this project to the upload area.
-    - Click **Next**, **Next**, and **Start Import**.
-
-1. Import Contact data:
-    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-    - Click **Launch Wizard**.
-    - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add New Records**.
-    - Drag **Contact_Data.csv** from the data folder of this project to the upload area.
-    - Click **Next**, **Next**, and **Start Import**.
-
-1. Import Market data:
-    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-    - Click **Launch Wizard**.
-    - Click the **Custom objects** tab, click **Market**, and click **Add New Records**.
-    - Drag **Market_Data.csv** from the data folder of this project to the upload area.
-    - Click **Next**, **Next**, and **Start Import**.
-
-1. Import Spaces data:
-    - Open the **Space_Data.csv** from the data folder of this project.
-    - In the **Market__c** column, add the record Id for the correct Market imported in the previous step. Use the **Market City Name** column to help match spaces to the correct Market.
-    - Save the changes to your file. *Note: You __must__ choose UTF-8 encoding when you save the file.*
-    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-    - Click **Launch Wizard**.
-    - Click the **Custom objects** tab, click **Space**, and click **Add New Records**.
-    - Drag **Space_Data.csv** from the data folder of this project to the upload area.
-    - Click **Next**, **Next**, and **Start Import**.
-    - If you see any issues with restricted picklist values blocking import, double-check that you saved your .csv with UTF-8 encoding and try again.
-
-
-1. Follow the instructions in the **Completing the Installation** section below to enable the Easy Spaces custom theme.
-
-1. In **App Launcher**, select the **Space Management** app.
-
-1. Note: Before trying to work with the Spaces Designer, use the **Reservation Manager** to create some draft reservations.
-
-1. Have fun exploring!
-
-
-### Install Using Salesforce DX
+### Installing Easy Spaces using Salesforce DX
 
 1.  Authenticate with your hub org (if not already done):
 
@@ -161,6 +97,69 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 
 1. Follow the steps below to configure the app theme.
 
+### Installing Easy Spaces by URL
+Use this option if you don't have Salesforce DX configured and want to experience the sample app.
+
+1. [Sign up](https://developer.salesforce.com/signup) for a Developer Edition (DE) org.
+
+1. Enable MyDomain in your DE org. Instructions to do this are [here](https://trailhead.salesforce.com/projects/quickstart-lightning-components/steps/quickstart-lightning-components1).
+
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFSIA2) to install the **ESBaseObjects** package and choose **Install for All Users**.
+
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFXIA2) to install the **ESBaseCode** package and choose **Install for All Users**.
+
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFcIAM) to install the **ESBaseStyles** package and choose **Install for All Users**.
+
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFhIAM) to install the **SpaceManagementApp** package and choose **Install for All Users**.
+
+1.  From the command line, clone this repository:
+
+    ```zsh
+    git clone https://github.com/trailheadapps/easy-spaces
+    cd easy-spaces
+    ```
+
+1. Import Lead data:
+    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+    - Click **Launch Wizard**.
+    - Click the **Standard objects** tab, click **Leads**, and click **Add New Records**.
+    - Drag **Lead_Data.csv** from the data folder of this project to the upload area.
+    - Click **Next**, **Next**, and **Start Import**.
+
+1. Import Contact data:
+    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+    - Click **Launch Wizard**.
+    - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add New Records**.
+    - Drag **Contact_Data.csv** from the data folder of this project to the upload area.
+    - Click **Next**, **Next**, and **Start Import**.
+
+1. Import Market data:
+    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+    - Click **Launch Wizard**.
+    - Click the **Custom objects** tab, click **Market**, and click **Add New Records**.
+    - Drag **Market_Data.csv** from the data folder of this project to the upload area.
+    - Click **Next**, **Next**, and **Start Import**.
+
+1. Import Spaces data:
+    - Open the **Space_Data.csv** from the data folder of this project.
+    - In the **Market__c** column, add the record Id for the correct Market imported in the previous step. Use the **Market City Name** column to help match spaces to the correct Market.
+    - Save the changes to your file. *Note: You __must__ choose UTF-8 encoding when you save the file.*
+    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+    - Click **Launch Wizard**.
+    - Click the **Custom objects** tab, click **Space**, and click **Add New Records**.
+    - Drag **Space_Data.csv** from the data folder of this project to the upload area.
+    - Click **Next**, **Next**, and **Start Import**.
+    - If you see any issues with restricted picklist values blocking import, double-check that you saved your .csv with UTF-8 encoding and try again.
+
+
+1. Follow the instructions in the **Completing the Installation** section below to enable the Easy Spaces custom theme.
+
+1. In **App Launcher**, select the **Space Management** app.
+
+1. Note: Before trying to work with the Spaces Designer, use the **Reservation Manager** to create some draft reservations.
+
+1. Have fun exploring!
+
 ## Completing the Installation
 
 ### Configure the Easy Spaces theme
@@ -198,7 +197,7 @@ This is just one example of object-agnostic design at work in Easy Spaces. See t
 
 ### Workspace API
 
-Easy Spaces uses the Workspace API to provide customized navigation behavior and control the tabs and subtabs in the Space Management console app. You can see the Workspace API at work in the **openRecordAction**, **reservationHelper** and **spaceDesigner** components. You can get more detail about using this API in your components in this [blog post](https://developer.salesforce.com/blogs/2018/06/announcing-the-easy-spaces-app.html). 
+Easy Spaces uses the Workspace API to provide customized navigation behavior and control the tabs and subtabs in the Space Management console app. You can see the Workspace API at work in the **openRecordAction**, **reservationHelper** and **spaceDesigner** components. You can get more detail about using this API in your components in this [blog post](https://developer.salesforce.com/blogs/2018/06/announcing-the-easy-spaces-app.html).
 
 ### Modular Design and Unlocked Packaging
 
