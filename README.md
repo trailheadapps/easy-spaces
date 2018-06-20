@@ -1,4 +1,6 @@
-## Easy Spaces
+## Easy Spaces Sample App
+
+[![CircleCI](https://circleci.com/gh/trailheadapps/easy-spaces.svg?style=svg)](https://circleci.com/gh/trailheadapps/easy-spaces)
 
 Easy Spaces is a fictional event management company that creates and manages custom pop-up spaces for companies and individuals. Easy Spaces helps customers create temporary spaces like cafés, game rooms or themed rooms for special occasions in their offices and homes.
 
@@ -19,7 +21,7 @@ A quick overview of the features you can explore with Easy Spaces:
 
 *  Modular app design and Unlocked Packaging
 *  Lightning Console & Workspace API
-*	Lightning Flow 
+*	Lightning Flow
 	* 	Dynamic flow interview components
 	*  Custom flow screen components
 	*  Local Action components
@@ -154,7 +156,7 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 
 1.  Open the scratch org:
     ```
-    sfdx force:org:open 
+    sfdx force:org:open
     ```
 
 1. Follow the steps below to configure the app theme.
@@ -170,7 +172,7 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 	- Brand Image: Upload the 'easy_spaces_tile_small.png' file from the 'es-images' folder in your cloned repo
 	- Page Background & Global Header Background: #8E94C0
 	- *Optional* Upload the remaining images in the 'es-images' folder as the Default Group & Default User Profile Banner Images
-1. Save & activate your theme 
+1. Save & activate your theme
 
 ## Code Highlights
 
@@ -184,7 +186,7 @@ Components used as Lightning Flow screens also enforce a convention in the marku
 
 ### Object-Agnostic Design
 
-The **customerList** and **customerTile** components can display information from Contact objects or Lead objects. 
+The **customerList** and **customerTile** components can display information from Contact objects or Lead objects.
 
 ![Two instances of customerList component on canvas in Lightning App Builder](./docs/customerList_view.png)
 
@@ -196,14 +198,14 @@ This is just one example of object-agnostic design at work in Easy Spaces. See t
 
 ### Workspace API
 
-Easy Spaces uses the Workspace API to provide customized navigation behavior and control the tabs and subtabs in the Space Management console app. You can see the Workspace API at work in the **openRecordAction**, **reservationHelper** and **spaceDesigner** components. You can get more detail about using this API in your components in this [blog post](). 
+Easy Spaces uses the Workspace API to provide customized navigation behavior and control the tabs and subtabs in the Space Management console app. You can see the Workspace API at work in the **openRecordAction**, **reservationHelper** and **spaceDesigner** components. You can get more detail about using this API in your components in this [blog post]().
 
 ### Modular Design and Unlocked Packaging
 
-Easy Spaces illustrates how to organize application metadata into granular units or modules. This approach is reflected in the design patterns at work throughout the application, like the use of design tokens and object-agnostic components. But you'll also see this at work in the structure of the Easy Spaces repo itself. 
+Easy Spaces illustrates how to organize application metadata into granular units or modules. This approach is reflected in the design patterns at work throughout the application, like the use of design tokens and object-agnostic components. But you'll also see this at work in the structure of the Easy Spaces repo itself.
 
-To install the Easy Spaces application, you'll need to install several, interdependent unlocked packages. The dependecies between the Easy Spaces packages are listed in the [sfdx-project.json](./sfdx-project.json) file for this repo. 
+To install the Easy Spaces application, you'll need to install several, interdependent unlocked packages. The dependecies between the Easy Spaces packages are listed in the [sfdx-project.json](./sfdx-project.json) file for this repo.
 
-You can also explore the contents of each package by looking at the related package folder within this repo. The `path` attribute entries in the sfdx-project.json show which folder contains the metadata for a particular package. 
+You can also explore the contents of each package by looking at the related package folder within this repo. The `path` attribute entries in the sfdx-project.json show which folder contains the metadata for a particular package.
 
 For more information on how to work with the sfdx-project.json markup related to unlocked packages, see this [blog post](). And for more background on the approach to organizing the Easy Spaces metadata into these package modules, check out [this post]().

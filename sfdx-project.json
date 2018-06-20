@@ -55,7 +55,7 @@
                 {
                     "package": "ESBaseCode",
                     "versionNumber": "0.1.0.LATEST"
-                }, 
+                },
                 {
                     "package": "ESBaseStyles",
                     "versionNumber": "0.1.0.LATEST"
@@ -67,10 +67,14 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "43.0",
     "packageAliases": {
-        "ESBaseObjects": "0HoB00000004CWSKA2",
-        "ESBaseCode": "0HoB00000004CWXKA2",
-        "ESBaseStyles": "0HoB00000004CWcKAM",
-        "ESSpaceMgmt": "0HoB00000004CWhKAM"
+      "ESBaseObjects": "0HoB00000004CWSKA2",
+      "ESBaseCode": "0HoB00000004CWXKA2",
+      "ESBaseStyles": "0HoB00000004CWcKAM",
+      "ESSpaceMgmt": "0HoB00000004CWhKAM",
+      "ESBaseObjects@0.1.0-3": "04tB00000006FFSIA2",
+      "ESBaseCode@0.1.0-2": "04tB00000006FFXIA2",
+      "ESBaseStyles@0.1.0-3": "04tB00000006FFcIAM",
+      "ESSpaceMgmt@0.1.0-3": "04tB00000006FFhIAM"
     }
 
 }
