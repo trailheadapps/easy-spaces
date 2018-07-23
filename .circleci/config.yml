@@ -62,6 +62,7 @@ jobs:
               - .sfdx/*
               - project/*
   deploy_source:
+  # This deploys the source to the ci scratch org.
     <<: *defaults
     steps:
       - attach_workspace:
@@ -71,6 +72,7 @@ jobs:
           command: |
              node_modules/sfdx-cli/bin/run force:source:push -u ciorg
   create_package_es-base-objects:
+  # Creating a package for es-base-objects, based on the GitHub branch name.
     <<: *defaults
     steps:
       - attach_workspace:
@@ -80,6 +82,7 @@ jobs:
           command: |
              scripts/packagingDeployment.sh $CIRCLE_BRANCH
   create_package_es-base-code:
+  # Creating a package for es-base-code, based on the GitHub branch name.
     <<: *defaults
     steps:
       - attach_workspace:
@@ -89,6 +92,7 @@ jobs:
           command: |
              scripts/packagingDeployment.sh $CIRCLE_BRANCH
   create_package_es-base-styles:
+  # Creating a package for es-base-styles, based on the GitHub branch name.
     <<: *defaults
     steps:
       - attach_workspace:
@@ -98,6 +102,7 @@ jobs:
           command: |
              scripts/packagingDeployment.sh $CIRCLE_BRANCH
   create_package_es-space-mgmt:
+  # Creating a package for es-space-mgmt, based on the GitHub branch name.
     <<: *defaults
     steps:
       - attach_workspace:
@@ -107,6 +112,7 @@ jobs:
           command: |
              scripts/packagingDeployment.sh $CIRCLE_BRANCH
   install_packages_uat:
+  # Deploys packages to UAT sandbox.
     <<: *defaults
     steps:
       - attach_workspace:
@@ -116,6 +122,7 @@ jobs:
           command: |
              scripts/packagingDeployment.sh $CIRCLE_BRANCH
   install_packages_full-copy-sandbox:
+  # Deploys packages to full copy sandbox.
     <<: *defaults
     steps:
       - attach_workspace:
