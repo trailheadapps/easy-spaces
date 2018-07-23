@@ -162,6 +162,7 @@ workflows:
                 - /packaging/.*/
                 - packaging
                 - develop
+                - master
       - deploy_source:
           requires:
             - setup_dx
