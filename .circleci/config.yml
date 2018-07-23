@@ -42,11 +42,11 @@ jobs:
           # You can get the sfdxurl via sfdx force:org:display -u yourOrg --json --verbose from your local machine.
           command: |
               if [[ "${CIRCLE_BRANCH}" = "develop" ]]; then
-                echo $SFDX_AUTH_URL_FULL_COPY > auth.url
-                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f auth.url
+                echo $SFDX_AUTH_URL_FULL_COPY > ~/auth.url
+                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f ~/auth.url
               elif [[ "${CIRCLE_BRANCH}" = "packaging" ]]; then
-                echo $SFDX_AUTH_URL_UAT > auth.url
-                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f auth.url
+                echo $SFDX_AUTH_URL_UAT > ~/auth.url
+                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f ~/auth.url
               elif [[ "${CIRCLE_BRANCH}" = *"feature/"* ]]; then
                 node_modules/sfdx-cli/bin/run force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg -d 1
               elif [[ "${CIRCLE_BRANCH}" = *"packaging/"* ]]; then
@@ -162,7 +162,6 @@ workflows:
                 - /packaging/.*/
                 - packaging
                 - develop
-                - master
       - deploy_source:
           requires:
             - setup_dx
