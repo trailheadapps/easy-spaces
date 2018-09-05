@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Install Salesforce DX
           command: |
-              openssl aes-256-cbc -k $KEY -in .circleci/server.key.enc -out .circleci/server.key -d
+              openssl enc -nosalt -aes-256-cbc -d -in .circleci/server.key.enc -out .circleci/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
               export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
               export SFDX_DOMAIN_RETRY=300
               npm install sfdx-cli
