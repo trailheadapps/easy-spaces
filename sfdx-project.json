@@ -2,63 +2,59 @@
     "packageDirectories": [
         {
             "path": "./es-base-objects",
-            "package": "ESBaseObjects",
-            "id": "0HoB00000004CWSKA2",
-            "versionName": "Base Objects v1",
-            "versionNumber": "0.1.0.NEXT",
+            "package": "es-base-objects",
+            "versionName": "Base Objects - Summer '18",
+            "versionNumber": "1.0.0.NEXT",
             "default": false
         },
         {
             "path": "./es-base-code",
-            "package": "ESBaseCode",
-            "id": "0HoB00000004CWXKA2",
-            "versionName": "Base Code v1",
-            "versionNumber": "0.1.0.NEXT",
+            "package": "es-base-code",
+            "versionName": "Base Code - Summer '18",
+            "versionNumber": "1.0.0.NEXT",
             "default": false,
             "dependencies": [
                 {
-                    "package": "ESBaseObjects",
-                    "versionNumber": "0.1.0.LATEST"
+                    "package": "es-base-objects",
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
         {
             "path": "./es-base-styles",
-            "package": "ESBaseStyles",
-            "id": "0HoB00000004CWcKAM",
-            "versionName": "Base Styles v1",
-            "versionNumber": "0.1.0.NEXT",
+            "package": "es-base-styles",
+            "versionName": "Base Styles - Summer '18",
+            "versionNumber": "1.0.0.NEXT",
             "default": false,
             "dependencies": [
                 {
-                    "package": "ESBaseObjects",
-                    "versionNumber": "0.1.0.LATEST"
+                    "package": "es-base-objects",
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
-                    "package": "ESBaseCode",
-                    "versionNumber": "0.1.0.LATEST"
+                    "package": "es-base-code",
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
         {
             "path": "./es-space-mgmt",
-            "package": "ESSpaceMgmt",
-            "id" : "0HoB00000004CWhKAM",
-            "versionName": "Space Mgmt v1",
-            "versionNumber": "0.1.0.NEXT",
+            "package": "es-space-mgmt",
+            "versionName": "Space Mgmt - Summer '18",
+            "versionNumber": "1.0.0.NEXT",
             "default": true,
             "dependencies": [
                 {
-                    "package": "ESBaseObjects",
-                    "versionNumber": "0.1.0.LATEST"
+                    "package": "es-base-objects",
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
-                    "package": "ESBaseCode",
-                    "versionNumber": "0.1.0.LATEST"
+                    "package": "es-base-code",
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
-                    "package": "ESBaseStyles",
-                    "versionNumber": "0.1.0.LATEST"
+                    "package": "es-base-styles",
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         }
@@ -67,14 +63,13 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "43.0",
     "packageAliases": {
-      "ESBaseObjects": "0HoB00000004CWSKA2",
-      "ESBaseCode": "0HoB00000004CWXKA2",
-      "ESBaseStyles": "0HoB00000004CWcKAM",
-      "ESSpaceMgmt": "0HoB00000004CWhKAM",
-      "ESBaseObjects@0.1.0-3": "04tB00000006FFSIA2",
-      "ESBaseCode@0.1.0-2": "04tB00000006FFXIA2",
-      "ESBaseStyles@0.1.0-3": "04tB00000006FFcIAM",
-      "ESSpaceMgmt@0.1.0-3": "04tB00000006FFhIAM"
+        "es-base-objects": "0Ho1I000000XZDaSAO",
+        "es-base-code": "0Ho1I000000XZDfSAO",
+        "es-base-styles": "0Ho1I000000XZDkSAO",
+        "es-space-mgmt": "0Ho1I000000XZDpSAO",
+        "es-base-objects@1.0.0-1": "04t1I0000036sjbQAA",
+        "es-base-code@1.0.0-1": "04t1I0000036sjgQAA",
+        "es-base-styles@1.0.0-1": "04t1I0000036sjlQAA",
+        "es-space-mgmt@1.0.0-1": "04t1I0000036sjqQAA"
     }
-
 }

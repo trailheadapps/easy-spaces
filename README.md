@@ -1,6 +1,6 @@
 ## Easy Spaces Sample App
 
-[![CircleCI](https://circleci.com/gh/trailheadapps/easy-spaces.svg?style=svg)](https://circleci.com/gh/trailheadapps/easy-spaces)
+[![CircleCI](https://circleci.com/gh/trailheadapps/easy-spaces/tree/master.svg?style=svg)](https://circleci.com/gh/trailheadapps/easy-spaces/tree/master)
 
 Easy Spaces is a fictional event management company that creates and manages custom pop-up spaces for companies and individuals. Easy Spaces helps customers create temporary spaces like cafés, game rooms or themed rooms for special occasions in their offices and homes.
 
@@ -52,28 +52,28 @@ A quick overview of the features you can explore with Easy Spaces:
     sfdx force:org:create -s -f config/project-scratch-def.json -a easyspaces
     ```
 
-1.  Install the ESBaseObjects package in your scratch org:
+1.  Install the es-base-objects package in your scratch org:
 
     ```zsh
-    sfdx force:package:install --package 04tB00000006FFSIA2
+    sfdx force:package:install --package 04t1I0000036sjbQAA
     ```
 
-1.  Install the ESBaseCode package in your scratch org:
+1.  Install the es-base-code package in your scratch org:
 
     ```zsh
-    sfdx force:package:install --package 04tB00000006FFXIA2
+    sfdx force:package:install --package 04t1I0000036sjgQAA
     ```
 
-1.  Install the ESBaseStyles package in your scratch org:
+1.  Install the es-base-styles package in your scratch org:
 
     ```zsh
-    sfdx force:package:install --package 04tB00000006FFcIAM
+    sfdx force:package:install --package 04t1I0000036sjlQAA
     ```
 
-1.  Install the SpaceManagementApp package in your scratch org:
+1.  Install the es-space-mgmt package in your scratch org:
 
     ```zsh
-    sfdx force:package:install --package 04tB00000006FFhIAM
+    sfdx force:package:install --package 04t1I0000036sjqQAA
     ```
 
 1.  Assign two EasySpaces permission sets to the default user:
@@ -104,13 +104,13 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 
 1. Enable MyDomain in your DE org. Instructions to do this are [here](https://trailhead.salesforce.com/projects/quickstart-lightning-components/steps/quickstart-lightning-components1).
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFSIA2) to install the **ESBaseObjects** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjbQAA) to install the **es-base-objects** package and choose **Install for All Users**.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFXIA2) to install the **ESBaseCode** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjgQAA) to install the **es-base-code** package and choose **Install for All Users**.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFcIAM) to install the **ESBaseStyles** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjlQAA) to install the **es-base-styles** package and choose **Install for All Users**.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB00000006FFhIAM) to install the **SpaceManagementApp** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjqQAA) to install the **es-space-mgmt** package and choose **Install for All Users**.
 
 1.  From the command line, clone this repository:
 

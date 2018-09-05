@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Install Salesforce DX
           command: |
-              openssl aes-256-cbc -k $KEY -in .circleci/server.key.enc -out .circleci/server.key -d
+              openssl enc -nosalt -aes-256-cbc -d -in .circleci/server.key.enc -out .circleci/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
               export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
               export SFDX_DOMAIN_RETRY=300
               npm install sfdx-cli
@@ -42,11 +42,11 @@ jobs:
           # You can get the sfdxurl via sfdx force:org:display -u yourOrg --json --verbose from your local machine.
           command: |
               if [[ "${CIRCLE_BRANCH}" = "develop" ]]; then
-                echo $SFDX_AUTH_URL_FULL_COPY > auth.url
-                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f auth.url
+                echo $SFDX_AUTH_URL_FULL_COPY > ~/auth.url
+                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f ~/auth.url
               elif [[ "${CIRCLE_BRANCH}" = "packaging" ]]; then
-                echo $SFDX_AUTH_URL_UAT > auth.url
-                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f auth.url
+                echo $SFDX_AUTH_URL_UAT > ~/auth.url
+                node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -s -a ciorg -f ~/auth.url
               elif [[ "${CIRCLE_BRANCH}" = *"feature/"* ]]; then
                 node_modules/sfdx-cli/bin/run force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg -d 1
               elif [[ "${CIRCLE_BRANCH}" = *"packaging/"* ]]; then
@@ -162,7 +162,6 @@ workflows:
                 - /packaging/.*/
                 - packaging
                 - develop
-                - master
       - deploy_source:
           requires:
             - setup_dx
