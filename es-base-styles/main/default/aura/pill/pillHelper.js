@@ -7,7 +7,6 @@
             action.setParams({
                 "label" : component.get("v.label")
             });
-            console.log("select fire.");
             action.fire();
         }else{
             //handle deselect
@@ -15,7 +14,6 @@
             action.setParams({
                 "label" : component.get("v.label")
             });
-            console.log("deselect fire.");
             action.fire();
         }
     }

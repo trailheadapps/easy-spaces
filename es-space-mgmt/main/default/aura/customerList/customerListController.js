@@ -7,7 +7,6 @@
         });
         action.setCallback(this, function(response){
             component.set("v.itemsList", response.getReturnValue());
-            console.log(component.get("v.itemsList"));
         });
         $A.enqueueAction(action);
         helper.setBadge(component, helper);
