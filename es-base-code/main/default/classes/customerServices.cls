@@ -1,6 +1,6 @@
 public class customerServices {
     
-    @auraEnabled
+    @auraEnabled(cacheable=true)
     public static Customer getCustomerFields(String objectType){
         Customer customer;
         for(Customer_Fields__mdt c: [SELECT Customer_Name__r.QualifiedAPIName, Customer_Email__r.QualifiedAPIName, Customer_City__c, Customer_State__c, Customer_Status__r.QualifiedAPIName
