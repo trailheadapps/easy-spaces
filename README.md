@@ -145,7 +145,7 @@ A quick overview of the features you can explore in Easy Spaces:
 *  Modular app design and Unlocked Packages
 *  Lightning Console APIs & Navigation Methods
 *	Lightning Flow
-	* 	Dynamic flow interview components
+	*  Dynamic flow interview components
 	*  Custom flow screen components
 	*  Local Action components
 * 	Custom Lightning Page Templates
