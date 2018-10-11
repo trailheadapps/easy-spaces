@@ -14,6 +14,8 @@
     refreshTab : function(component){
         var navItemAPI = component.find("navigationItemAPI");
         navItemAPI.refreshNavigationItem().then(function(response) {
+            //response is true or false, depending on page state
+            //true on successful refresh, false if unsaved changes block refresh
             console.log('navRefresh',response);
         })
         .catch(function(error) {

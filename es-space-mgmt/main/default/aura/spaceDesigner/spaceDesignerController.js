@@ -14,6 +14,8 @@
             console.log('flow finish detected');
             var navigationItemAPI = component.find("navigationItemAPI");
             navigationItemAPI.refreshNavigationItem().then(function(response) {
+                //for illustration of the refreshNavigationItem() promise response
+                //true on refresh, false if refresh blocked
                 console.log('navRefresh',response);
             })
             .catch(function(error) {

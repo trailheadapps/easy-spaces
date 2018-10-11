@@ -177,7 +177,7 @@ This is just one example of object-agnostic design at work in Easy Spaces. See t
 
 ### Control Navigation and Behavior in Console Apps
 
-Easy Spaces uses the actions to control navigation and behaviors of tabs and subtabs in the Space Management console app. You can see the Workspace API at work in the **openRecordAction** component, which enables flows to finish by navigating users to a new subtab. The **reservationHelper** and **spaceDesigner** components use the Navigation Item API to refresh custom Lightning Page tabs as a user works. You can get more detail about using the Workspace API in your components in this [blog post](https://developer.salesforce.com/blogs/2018/06/announcing-the-easy-spaces-app.html).
+Easy Spaces uses the Lightning Console JavaScript API to control navigation and behaviors of tabs and subtabs in the Space Management console app. You can see the lightning:workspaceAPI component at work in the **openRecordAction** component, which enables flow interviews to navigate users to a new subtab. The **reservationHelper** and **spaceDesigner** components use the lightning:navigationItemAPI component to refresh custom Lightning Page tabs in the background as a user works. You can get more detail about using the Workspace API in your components in this [blog post](https://developer.salesforce.com/blogs/2018/06/announcing-the-easy-spaces-app.html).
 
 ### Modular Design and Unlocked Packaging
 
