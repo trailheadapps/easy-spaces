@@ -3,8 +3,11 @@
     "edition": "Developer",
     "hasSampleData": "false",
     "features": "ServiceCloud;ServiceWave;SalesWave",
-    "orgPreferences": {
-        "enabled": ["S1DesktopEnabled", "IsLiveAgentEnabled"],
-        "disabled": ["S1EncryptedStoragePref2"]
+    "settings": {
+      "orgPreferenceSettings": {
+        "s1DesktopEnabled": true,
+        "s1EncryptedStoragePref2": false,
+        "isLiveAgentEnabled": true
+      }
     }
 }
