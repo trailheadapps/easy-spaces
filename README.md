@@ -82,7 +82,7 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 
 1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036tXqQAI) to install the **es-base-styles** package and choose **Install for All Users**.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036tXvQAI) to install the **es-space-mgmt** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036tYUQAY) to install the **es-space-mgmt** package and choose **Install for All Users**.
 
 1.  From the command line, enter to following commands to clone this repository. You'll want to do this to get the files with sample data on your computer:
 
