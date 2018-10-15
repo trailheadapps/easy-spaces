@@ -3,65 +3,65 @@
         {
             "path": "./es-base-objects",
             "package": "es-base-objects",
-            "versionName": "Base Objects - Summer '18",
-            "versionNumber": "1.0.0.NEXT",
+            "versionName": "Base Objects - Winter '19",
+            "versionNumber": "2.0.0.NEXT",
             "default": false
         },
         {
             "path": "./es-base-code",
             "package": "es-base-code",
-            "versionName": "Base Code - Summer '18",
-            "versionNumber": "1.0.0.NEXT",
+            "versionName": "Base Code - Winter '19",
+            "versionNumber": "2.0.0.NEXT",
             "default": false,
             "dependencies": [
                 {
                     "package": "es-base-objects",
-                    "versionNumber": "1.0.0.LATEST"
+                    "versionNumber": "2.0.0.LATEST"
                 }
             ]
         },
         {
             "path": "./es-base-styles",
             "package": "es-base-styles",
-            "versionName": "Base Styles - Summer '18",
-            "versionNumber": "1.0.0.NEXT",
+            "versionName": "Base Styles - Winter '19",
+            "versionNumber": "2.0.0.NEXT",
             "default": false,
             "dependencies": [
                 {
                     "package": "es-base-objects",
-                    "versionNumber": "1.0.0.LATEST"
+                    "versionNumber": "2.0.0.LATEST"
                 },
                 {
                     "package": "es-base-code",
-                    "versionNumber": "1.0.0.LATEST"
+                    "versionNumber": "2.0.0.LATEST"
                 }
             ]
         },
         {
             "path": "./es-space-mgmt",
             "package": "es-space-mgmt",
-            "versionName": "Space Mgmt - Summer '18",
-            "versionNumber": "1.0.0.NEXT",
+            "versionName": "Space Mgmt - Winter '19",
+            "versionNumber": "2.0.0.NEXT",
             "default": true,
             "dependencies": [
                 {
                     "package": "es-base-objects",
-                    "versionNumber": "1.0.0.LATEST"
+                    "versionNumber": "2.0.0.LATEST"
                 },
                 {
                     "package": "es-base-code",
-                    "versionNumber": "1.0.0.LATEST"
+                    "versionNumber": "2.0.0.LATEST"
                 },
                 {
                     "package": "es-base-styles",
-                    "versionNumber": "1.0.0.LATEST"
+                    "versionNumber": "2.0.0.LATEST"
                 }
             ]
         }
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "43.0",
+    "sourceApiVersion": "44.0",
     "packageAliases": {
         "es-base-objects": "0Ho1I000000XZDaSAO",
         "es-base-code": "0Ho1I000000XZDfSAO",
@@ -70,6 +70,10 @@
         "es-base-objects@1.0.0-1": "04t1I0000036sjbQAA",
         "es-base-code@1.0.0-1": "04t1I0000036sjgQAA",
         "es-base-styles@1.0.0-1": "04t1I0000036sjlQAA",
-        "es-space-mgmt@1.0.0-1": "04t1I0000036sjqQAA"
+        "es-space-mgmt@1.0.0-1": "04t1I0000036sjqQAA",
+        "es-base-objects@2.0.0-1": "04t1I0000036tXgQAI",
+        "es-base-code@2.0.0-1": "04t1I0000036tXlQAI",
+        "es-base-styles@2.0.0-1": "04t1I0000036tXqQAI",
+        "es-space-mgmt@2.0.0-1": "04t1I0000036tYUQAY"
     }
 }

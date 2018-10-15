@@ -1,13 +1,4 @@
 ({
-    onInit : function(component, event, helper){
-        var workspaceAPI = component.find("workspace");
-        workspaceAPI.getEnclosingTabId().then(function(tabId) {
-            component.set("v.tabId", tabId);
-       })
-        .catch(function(error) {
-            console.log(error);
-        }); 
-    },
     manageFlow : function(component, event, helper) {
         var channel = event.getParam("channel");
         var record = component.get("v.reservation");
@@ -20,12 +11,14 @@
 
     handleReset : function(component, event, helper){
         if(event.getParam("status") === "FINISHED"){
-            var workspaceAPI = component.find("workspace");
-            var currentTabId = component.get("v.tabId");
-            workspaceAPI.refreshTab({
-                tabId: currentTabId,
-                includeAllSubtabs: false
-            }).catch(function(error) {
+            console.log('flow finish detected');
+            var navigationItemAPI = component.find("navigationItemAPI");
+            navigationItemAPI.refreshNavigationItem().then(function(response) {
+                //for illustration of the refreshNavigationItem() promise response
+                //true on refresh, false if refresh blocked
+                console.log('navRefresh',response);
+            })
+            .catch(function(error) {
                 console.log(error);
             });
         }

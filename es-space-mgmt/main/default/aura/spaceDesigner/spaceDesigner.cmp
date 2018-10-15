@@ -1,11 +1,11 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global">
-    <lightning:workspaceAPI aura:id="workspace"/>
+    <lightning:navigationItemAPI aura:id="navigationItemAPI"/>
+
     <aura:attribute name="reservation" type="Object" /> 
     <aura:attribute name="customer" type="String"/>
     <aura:attribute name="tabId" type="String" />
     
     <aura:handler event="c:selectObject" action="{!c.manageFlow}"/>
-    <aura:handler name="init" value="this" action="{!c.onInit}"/>
     
     <aura:if isTrue="{!v.reservation}">
         <lightning:card iconName="custom:custom50" title="{! 'Designing Space for '+ v.customer}">

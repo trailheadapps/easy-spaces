@@ -7,7 +7,13 @@
         workspaceAPI.openTab({
             url: '/lightning/r/'+sobject+'/'+recordId+'/view'
         }).then(function(response) {
+            console.log('openRecord detected.');
             workspaceAPI.focusTab({tabId : response});
+            //local action 'opens' before flow changes hit cache, so we need to refresh to grab current data
+            workspaceAPI.refreshTab({
+                tabId : response,
+                includeAllSubtabs : false
+            });
        })
         .catch(function(error) {
             console.log(error);
