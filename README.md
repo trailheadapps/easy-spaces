@@ -20,7 +20,7 @@ Easy Spaces is a fictional event management company that creates and manages cus
 
 ### Installing Easy Spaces using Salesforce DX
 
-This is the recommended installation option for developers who want to experience the app and code. 
+This is the recommended installation option for developers who want to experience the app and code.
 
 1.  Authenticate with your hub org (if not already done):
 
@@ -74,15 +74,15 @@ Use this option if you don't have Salesforce DX configured and want to experienc
 
 1. [Sign up](https://developer.salesforce.com/signup) for a Developer Edition (DE) org.
 
-1. Enable MyDomain in your DE org. Instructions to do this are [here](https://trailhead.salesforce.com/projects/quickstart-lightning-components/steps/quickstart-lightning-components1).
+1. Enable MyDomain in your DE org. Instructions to do this are [here](https://trailhead.salesforce.com/modules/identity_login/units/identity_login_my_domain).
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjbQAA) to install the **es-base-objects** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036tXgQAI) to install the **es-base-objects** package and choose **Install for All Users**.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjgQAA) to install the **es-base-code** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036tXlQAI) to install the **es-base-code** package and choose **Install for All Users**.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjlQAA) to install the **es-base-styles** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036tXqQAI) to install the **es-base-styles** package and choose **Install for All Users**.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036sjqQAA) to install the **es-space-mgmt** package and choose **Install for All Users**.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036tXvQAI) to install the **es-space-mgmt** package and choose **Install for All Users**.
 
 1.  From the command line, enter to following commands to clone this repository. You'll want to do this to get the files with sample data on your computer:
 

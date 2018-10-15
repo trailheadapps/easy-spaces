@@ -9,13 +9,13 @@ fi
 sfdx force:org:create -a $ALIAS -s -f config/project-scratch-def.json
 
 echo "Scratch org created. Installing packages."
-sfdx force:package:install --package 04tB00000006FFSIA2
+sfdx force:package:install --package 04t1I0000036tXgQAI
 sleep 60
-sfdx force:package:install --package 04tB00000006FFXIA2
+sfdx force:package:install --package 04t1I0000036tXlQAI
 sleep 60
-sfdx force:package:install --package 04tB00000006FFcIAM
+sfdx force:package:install --package 04t1I0000036tXqQAI
 sleep 60
-sfdx force:package:install --package 04tB00000006FFhIAM
+sfdx force:package:install --package 04t1I0000036tXvQAI
 sleep 60
 echo "Packages installed. Setting up data and permissions."
 sfdx force:user:permset:assign -n EasySpacesObjects
