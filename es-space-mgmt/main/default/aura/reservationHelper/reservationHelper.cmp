@@ -1,12 +1,12 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global">
-    <lightning:workspaceAPI aura:id="workspace"/>
+    <lightning:navigationItemAPI aura:id="navigationItemAPI"/>
+
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="error" type="String"/>
     <aura:attribute name="sobjectType" type="String"/>
     <aura:attribute name="tabId" type="String"/>
     
     <aura:handler event="ltng:selectSObject" action="{!c.handleSelectEvent}" />
-    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
 
     <lightning:card iconName="custom:custom18" title="Reservation Helper">
         <aura:if isTrue="{!v.recordId}">

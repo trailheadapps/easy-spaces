@@ -32,7 +32,7 @@
         <lightning:layout multipleRows="true" class="slds-m-horizontal_small">
             <lightning:layoutItem size="12" class="slds-m-vertical_small">
                 <p class="slds-text-heading_x-small slds-p-bottom_small">
-                    Primary Contact for Reservation: 
+                    Primary Contact Info for Reservation: 
                 </p>
                 <lightning:recordForm 
                     objectApiName="{!v.sobject}"
@@ -51,8 +51,8 @@
                 <lightning:slider label="For how many people?" value="{!v.numberOfPeople}" size="base" min="2" max="250" />
             </lightning:layoutItem>    
             <lightning:layoutItem size="6" class="slds-p-left_small slds-m-vertical_small">  
-                    <lightning:input type="date" name="start" label="When do they need the space?" placeholder="Choose date..." value="{!v.startDate}" class="slds-m-bottom_small"/>
-                    <lightning:radioGroup name="options" label="How long do they want the space?" options="{!v.dateRanges}" value="{!v.endDays}" type="radio"/>
+                    <lightning:radioGroup name="options" label="How long do they want the space?" options="{!v.dateRanges}" value="{!v.endDays}" type="radio" class="slds-m-bottom_small"/>
+                    <lightning:input type="date" name="start" label="When do they need the space?" placeholder="Choose date..." value="{!v.startDate}" />
             </lightning:layoutItem>  
             <lightning:layoutItem>
                 <lightning:button variant="brand" label="Draft Reservation" title="Draft" onclick="{!c.draftReservation}"/>

@@ -10,7 +10,6 @@
     sendMuteEvent : function(recId){
         var mutes = new Set();
         mutes.add(recId);
-        console.log('mutes set: ', mutes);
         var action = $A.get("e.c:muteTiles");
         action.setParams({
             "muteArray" : mutes,

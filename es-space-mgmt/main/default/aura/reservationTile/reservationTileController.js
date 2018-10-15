@@ -13,7 +13,6 @@
             var tile = component.find("tile");
             //muteArray has Id of active record
             if( !mutesArray.has(recordId) && !isMuted){
-                console.log('mute detected');
                 $A.util.addClass(tile, "mute");
                 component.set("v.muted", !isMuted);
             }
