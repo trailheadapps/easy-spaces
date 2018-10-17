@@ -7,7 +7,7 @@
       "orgPreferenceSettings": {
         "s1DesktopEnabled": true,
         "s1EncryptedStoragePref2": false,
-        "isLiveAgentEnabled": true
+        "selfSetPasswordInApi": true
       }
     }
 }
